@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_anime'])) {
     // File upload handling
     $imageTmpName = $_FILES['image']['tmp_name'];
     $videoTmpName = $_FILES['video']['tmp_name'];
-    $imagePath = "assets/images/$image";
+    $imagePath = "assets/Image/$image";
     $videoPath = "assets/video/$video";
     move_uploaded_file($imageTmpName, $imagePath);
     move_uploaded_file($videoTmpName, $videoPath);
@@ -43,7 +43,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['edit_anime'])) {
     $genre = $_POST['edit_genre'];
     $description = $_POST['edit_description']; // New description field
 
-    $query = "UPDATE anime_details SET name='$title', genre='$genre', description='$description' WHERE id='$animeId'";
+    // Initialize query
+    $query = "UPDATE anime_details SET name='$title', genre='$genre', description='$description'";
+
+    // Handle image upload if a new image is provided
+    if (!empty($_FILES['edit_image']['name'])) {
+        $image = $_FILES['edit_image']['name'];
+        $imageTmpName = $_FILES['edit_image']['tmp_name'];
+        $imagePath = "assets/Image/$image";
+        move_uploaded_file($imageTmpName, $imagePath);
+        $query .= ", image_url='$image'";
+    }
+
+    // Handle video upload if a new video is provided
+    if (!empty($_FILES['edit_video']['name'])) {
+        $video = $_FILES['edit_video']['name'];
+        $videoTmpName = $_FILES['edit_video']['tmp_name'];
+        $videoPath = "assets/video/$video";
+        move_uploaded_file($videoTmpName, $videoPath);
+        $query .= ", video_url='$video'";
+    }
+
+    // Complete the query
+    $query .= " WHERE id='$animeId'";
+
     if (mysqli_query($conn, $query)) {
         header("Location: manageanime.php");
         exit();
@@ -202,7 +225,7 @@ if (isset($_GET['delete_id'])) {
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form method="POST">
+          <form method="POST" enctype="multipart/form-data">
             <input type="hidden" id="edit-anime-id" name="anime_id" />
             <div class="mb-3">
               <label for="edit-anime-title" class="form-label">Title</label>
@@ -215,6 +238,14 @@ if (isset($_GET['delete_id'])) {
             <div class="mb-3">
               <label for="edit-anime-description" class="form-label">Description</label>
               <textarea class="form-control" id="edit-anime-description" name="edit_description" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="edit-anime-image" class="form-label">Image</label>
+              <input type="file" class="form-control" name="edit_image" id="edit-anime-image" accept="image/*" />
+            </div>
+            <div class="mb-3">
+              <label for="edit-anime-video" class="form-label">Video</label>
+              <input type="file" class="form-control" name="edit_video" id="edit-anime-video" accept="video/*" />
             </div>
             <button type="submit" name="edit_anime" class="btn btn-success">Update Anime</button>
           </form>

@@ -59,10 +59,8 @@ $conn->close();
 <body class="d-flex flex-column min-vh-100">
     <nav>
         <a href="index.php">Home</a>
-        <a href="Blog.html">Blog</a>
         <a href="Aboutus.html">About Us</a>
         <a href="Contact.html">Contact Us</a>
-        <input type="text" placeholder="Search...">
     </nav>
 
     <div class="nav2">
@@ -100,7 +98,7 @@ $conn->close();
             </div>
             <div class="col-md-6 register-section d-flex flex-column justify-content-center">
                 <h3>Don't Have An Account?</h3>
-                <a href="signup.html" class="btn btn-outline-primary text-white mt-3">Register Now</a>
+                <a href="signup.php" class="btn btn-outline-primary text-white mt-3">Register Now</a>
                 <a href="index.php" class="btn btn-outline-secondary text-white mt-3">Guest Mode</a> <!-- Added Guest Mode button -->
             </div>
         </div>

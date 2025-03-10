@@ -157,7 +157,8 @@ $comments_result = $stmt->get_result();
                 <?php while ($row = $comments_result->fetch_assoc()): ?>
                     <div class="comment" id="comment-<?php echo $row['id']; ?>">
                         <div class="comment-meta">
-                            <img src="<?php echo (!empty($row['profile_picture'])) ? 'uploads/' . htmlspecialchars($row['profile_picture']) : 'assets/Image/default.jpg'; ?>" alt="Profile" class="profile-pic">
+                            <img src="<?php echo (!empty($row['profile_picture'])) ? 'uploads/' . htmlspecialchars($row['profile_picture']) :
+                             'assets/Image/default.jpg'; ?>" alt="Profile" class="profile-pic">
                             <span class="comment-username"><strong><?php echo htmlspecialchars($row['username']); ?></strong></span>
                             <span class="comment-date" style="font-size:0.8em;"><?php echo htmlspecialchars($row['created_at']); ?></span>
                         </div>
@@ -173,7 +174,8 @@ $comments_result = $stmt->get_result();
                         </div>
 
                         <!-- Hidden Reply Form -->
-                        <form class="reply-form" action="Watch.php?anime_id=<?php echo $anime_id; ?>&episode_id=<?php echo $episode_id; ?>" method="POST" style="display: none;">
+                        <form class="reply-form" action="Watch.php?anime_id=<?php echo $anime_id; ?>&episode_id=<?php echo $episode_id; ?>"
+                         method="POST" style="display: none;">
                             <input type="hidden" name="anime_id" value="<?php echo $anime_id; ?>">
                             <input type="hidden" name="episode_id" value="<?php echo $episode_id; ?>">
                             <input type="hidden" name="parent_id" value="<?php echo $row['id']; ?>">

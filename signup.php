@@ -80,10 +80,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <nav>
         <a href="index.php">Home</a>
-        <a href="Blog.html">Blog</a>
         <a href="Aboutus.html">About Us</a>
         <a href="Contact.html">Contact Us</a>
-        <input type="text" placeholder="Search...">
     </nav>
     <div class="nav2">
         <div class="logo">

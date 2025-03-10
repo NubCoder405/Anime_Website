@@ -48,7 +48,7 @@
         <?php if (!isset($_SESSION['user_id'])): ?>
           <!-- If not logged in -->
           <a href="login.php" class="btn btn-success">Login</a>
-          <a href="signup.html" class="btn btn-success">Sign Up</a>
+          <a href="signup.php" class="btn btn-success">Sign Up</a>
         <?php else: ?>
           <!-- If logged in, show profile circle and logout -->
           <a href="profile.php">
@@ -169,7 +169,7 @@
         </div>
         <!-- Card 4 -->
         <div class="col-md-4">
-          <a href="Details.php?id=2" class="text-decoration-none">
+          <a href="Details.php?id=6" class="text-decoration-none">
             <div class="card">
               <img src="assets/Image/Zenshu.jpg" class="card-img-top" alt="Anime 4">
               <div class="card-body text-center">
@@ -180,7 +180,7 @@
         </div>
         <!-- Card 5 -->
         <div class="col-md-4">
-          <a href="Details.php?id=3" class="text-decoration-none">
+          <a href="Details.php?id=7" class="text-decoration-none">
             <div class="card">
               <img src="assets/Image/Sakamoto-Days.jpg" class="card-img-top" alt="Anime 5">
               <div class="card-body text-center">
@@ -191,7 +191,7 @@
         </div>
         <!-- Card 6 -->
         <div class="col-md-4">
-          <a href="Details.php?id=4" class="text-decoration-none">
+          <a href="Details.php?id=5" class="text-decoration-none">
             <div class="card">
               <img src="assets/Image/Hanako.jpg" class="card-img-top" alt="Anime 6">
               <div class="card-body text-center">
