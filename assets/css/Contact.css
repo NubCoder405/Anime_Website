@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0b0c2a;
+    color: #fff;
+}
+nav {
+position: fixed;
+top: 20px;
+right: 20px;
+transform: skew(-20deg);
+background-color: #333;
+padding: 10px 20px;
+border-radius: 10px;
+z-index: 1000;
+}
+nav a {
+color: white;
+text-decoration: none;
+padding: 10px;
+display: inline-block;
+transform: skew(20deg);
+}
+nav input[type="text"] {
+padding: 5px;
+border: none;
+border-radius: 5px;
+margin-left: 10px;
+transform: skew(20deg);
+}
+nav a:hover {
+background-color: #575757;
+}
+nav input[type="text"] {
+padding: 5px;
+border: none;
+border-radius: 5px;
+margin-left: 10px;
+}
+nav a.btn-success {
+background-color: #008000;
+color: white;
+border-radius: 5px;
+padding: 5px 10px;
+margin-left: 10px;
+}
+nav a.btn-success:hover {
+background-color: darkgreen;
+}
+.nav2 {
+position: fixed;
+top: 0px;
+left: 20px;
+background-color: transparent;
+z-index: 1000;
+}
+.logo img {
+width: 200px;
+height: 110px;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+header {
+    background: #0b0c2a;
+    color: #fff;
+    padding-top: 100px; /* Increased padding to push the title down */
+    min-height: 70px;
+    border-bottom: green 3px solid;
+}
+header a {
+    color: green;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+header ul {
+    padding: 0;
+    list-style: none;
+}
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+.faq-section {
+    background: #fff;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #0b0c2a;
+}
+.faq-section h2 {
+    margin-bottom: 20px;
+}
+.faq {
+    margin-bottom: 20px;
+}
+.faq h3 {
+    margin: 0;
+    padding: 10px;
+    background: gray;
+    color: #fff;
+    cursor: pointer;
+}
+.faq p {
+    display: none;
+    padding: 10px;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+}
+.contact-form {
+    background: #fff;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #0b0c2a;
+}
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.contact-form button {
+    padding: 10px 20px;
+    background: #77aaff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.footer-logo {
+    width: 200px;
+    height: auto;
+}
+.go-to-top {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}

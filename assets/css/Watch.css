@@ -1,0 +1,121 @@
+nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    transform: skew(-20deg);
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    transform: skew(20deg);
+}
+nav input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    transform: skew(20deg);
+}
+nav a:hover {
+    background-color: #575757;
+}
+nav input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.nav2 {
+    position: fixed;
+    top: 0px;
+    left: 20px;
+    background-color: transparent;
+    z-index: 1000;
+}
+.logo img {
+    width: 200px;
+    height: 110px;
+}
+body {
+  background-color: #0b0c2a;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+.video-container {
+  position: relative;
+  padding-top: 0; 
+  margin-top: 0;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.episode-box {
+  width: 60px;
+  height: 60px;
+  background-color: #161b22;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.episode-box:hover {
+  background-color: #1f2833;
+}
+.episode-title {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.card {
+  background-color: #161b22;
+  border: none;
+}
+.related-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.related-card {
+  width: 70%; /* Shrinks width */
+  margin: auto;
+  color: white;
+}
+.related-card .card-body {
+  text-align: center;
+}
+.comments-section {
+  background-color: #161b22;
+  padding: 15px;
+  border-radius: 8px;
+}
+.comments-section p {
+  margin: 10px 0;
+}
+
+.footer-logo {
+  width: 200px;
+  height: auto;
+}
+.go-to-top {
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}

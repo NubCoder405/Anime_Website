@@ -1,0 +1,399 @@
+body {
+    background-color: #0b0c2a;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    transform: skew(-20deg);
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    transform: skew(20deg);
+}
+nav input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    transform: skew(20deg);
+}
+nav a:hover {
+    background-color: #575757;
+}
+nav input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+nav a.btn-success {
+    background-color: #008000;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+nav a.btn-success:hover {
+    background-color: darkgreen;
+}
+.nav2 {
+    position: fixed;
+    top: 0px;
+    left: 20px;
+    background-color: transparent;
+    z-index: 1000;
+}
+.logo img {
+    width: 200px;
+    height: 110px;
+}
+
+.slider {
+    position: relative;
+    width: calc(100vw - 100px); /* Adjusted to increase the gap on both sides */
+    height: calc(100vh - 70px); /* Keep this as needed */
+    overflow: hidden;
+    margin: 35px 50px; /* Increased margin to add more gap on the sides */
+}
+
+
+.slider .item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0 0 0 0;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.slider .item.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .item .content {
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: white;
+    text-shadow: 0 5px 10px black;
+    z-index: 2; /* Ensure content is above the image */
+    /* background-color: rgba(0, 0, 0, 0.7);*/
+}
+
+.slider .item .content .title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.3em;
+    opacity: 0;
+    transform: translateY(50px);
+    filter: blur(20px);
+    animation: showContent 0.5s forwards;
+}
+
+.slider .item .content .type {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: rgb(21, 202, 21);
+    opacity: 0;
+    transform: translateY(50px);
+    filter: blur(20px);
+    animation: showContent 0.5s forwards;
+    animation-delay: 0.2s;
+}
+
+.slider .item .content .description {
+    opacity: 0;
+    transform: translateY(50px);
+    filter: blur(20px);
+    animation: showContent 0.5s forwards;
+    animation-delay: 0.4s;
+}
+
+.slider .item .content .button button {
+    border: 2px solid black;
+    margin: 20px 0;
+    background: white;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.4s;
+    padding: 10px 20px;
+}
+
+.slider .item .content .button button:hover {
+    transform: scale(1.2);
+    border-color: #008000;
+    color: white;
+    background-color: #008000;
+}
+
+
+.slider .item .content .title,
+.slider .item .content .type,
+.slider .item .content .description,
+.slider .item .content .button {
+    opacity: 0;
+    transform: translateY(50px);
+    filter: blur(20px);
+    animation: showContent 0.5s forwards;
+}
+
+.slider .item.active .content .title {
+    animation-delay: 0.4s;
+}
+
+.slider .item.active .content .type {
+    animation-delay: 0.6s;
+}
+
+.slider .item.active .content .description {
+    animation-delay: 0.8s;
+}
+
+.slider .item.active .content .button {
+    animation-delay: 1s;
+}
+
+.thumbnail {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+
+.thumbnail .item {
+    width: 200px;
+    height: 100px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.arrowButtons {
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.arrowButtons button {
+    width: 50px;
+    height: 50px;
+    background: #008000;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.4s;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.arrowButtons button:hover {
+    transform: scale(1.2);
+    background: white;
+    color: black;
+}
+
+.slider .list .item:nth-child(1){
+    z-index: 1;
+}
+
+.slider .list .item:nth-child(1) .content .title,
+.slider .list .item:nth-child(1) .content .type,
+.slider .list .item:nth-child(1) .content .description,
+.slider .list .item:nth-child(1) .content .button{
+    transform: translateY(50px);
+    opacity: 0;
+    filter: blur(20px);
+    animation: showContent 0.5s 1s linear 1s forwards;
+}
+
+@keyframes showContent {
+    to{
+        transform: translateY(0);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+.slider .list .item:nth-child(1) .content .title{
+    animation-delay: 0.4s !important;
+}
+
+.slider .list .item:nth-child(1) .content .type{
+    animation-delay: 0.6s !important;
+}
+
+.slider .list .item:nth-child(1) .content .description{
+    animation-delay: 0.8s !important;
+}
+
+.slider .list .item:nth-child(1) .content .button{
+    animation-delay: 1s !important;
+}
+
+.slider.next .list .item:nth-child(1) img,
+.slider.prev .list .item:nth-child(1) img {
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage 0.5s linear 1 forwards;
+}
+
+@keyframes showImage {
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;   
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.slider.next .thumbnail .item:nth-last-child(1),
+.slider.prev .thumbnail .item:nth-child(1) {
+    overflow: hidden;
+    animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+.slider.next .thumbnail,
+.slider.prev .thumbnail {
+    animation: effectNext 0.5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateY(150px);
+    }
+}
+
+.slider.prev .list .item:nth-child(2),
+.slider.next .list .item:nth-child(2) {
+    z-index: 2;
+}
+
+.slider.prev .list .item:nth-child(2) img,
+.slider.next .list .item:nth-child(2) img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: outFrame 0.5s linear 1 forwards;
+}
+
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.slider.next .arrowButtons .button,
+.slider.prev .arrowButtons .button{
+    pointer-events: none;
+}
+
+.slider.prev .list .item:nth-child(2) .content .title,
+.slider.prev .list .item:nth-child(2) .content .type,
+.slider.prev .list .item:nth-child(2) .content .description,
+.slider.prev .list .item:nth-child(2) .content .button
+{
+    animation: contentOut 1.5s linear 1 forwards !important;
+}
+
+.slider.next .list .item:nth-child(2) .content .title,
+.slider.next .list .item:nth-child(2) .content .type,
+.slider.next .list .item:nth-child(2) .content .description,
+.slider.next .list .item:nth-child(2) .content .button {
+    animation: contentOut 1.5s linear 1 forwards !important;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateX(-150px);
+        opacity: 0;
+        filter: blur(30px);
+    }
+}
+
+
+/* Popular card css */
+
+.card {
+background-color: #161b22;
+border: none;
+transition: transform 0.2s;
+}
+.card:hover {
+transform: scale(1.05);
+}
+.card img {
+border-radius: 8px;
+}
+.card-title {
+font-size: 1.2rem;
+font-weight: bold;
+margin-top: 10px;
+color: white;
+}
+.card a {
+text-decoration: none;
+color: white;
+}
+
+.footer-logo {
+    width: 200px;
+    height: auto;
+}
+.go-to-top {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,54 @@
+nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    transform: skew(-20deg);
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    transform: skew(20deg);
+}
+nav input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    transform: skew(20deg);
+}
+nav a:hover {
+    background-color: #575757;
+}
+nav input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+nav a.btn-success {
+    background-color: #008000;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+nav a.btn-success:hover {
+    background-color: darkgreen;
+}
+.nav2 {
+    position: fixed;
+    top: 0px;
+    left: 20px;
+    background-color: transparent;
+    z-index: 1000;
+}
+.logo img {
+    width: 200px;
+    height: 110px;
+}

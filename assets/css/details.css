@@ -1,0 +1,119 @@
+body {
+    background-color: #0b0c2a;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    transform: skew(-20deg);
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    transform: skew(20deg);
+}
+nav input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    transform: skew(20deg);
+}
+nav a:hover {
+    background-color: #575757;
+}
+nav input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+nav a.btn-success {
+    background-color: #008000;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+nav a.btn-success:hover {
+    background-color: darkgreen;
+}
+.nav2 {
+    position: fixed;
+    top: 0px;
+    left: 20px;
+    background-color: transparent;
+    z-index: 1000;
+}
+.logo img {
+    width: 200px;
+    height: 110px;
+}
+.container {
+    margin-top: 100px;
+}
+.comments-section {
+    background-color: #161b22;
+    padding: 15px;
+    border-radius: 8px;
+}
+.comments-section p {
+    margin: 10px 0;
+}
+.related-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.related-card {
+    background-color: transparent;
+    color: white;
+}
+.related-card .card-body {
+    text-align: center;
+}
+.footer-logo {
+    width: 200px;
+    height: auto;
+}
+.go-to-top {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Profile picture in comment */
+.profile-pic {
+    width: 40px !important;  /* force smaller size */
+    height: 40px !important; /* force smaller size */
+    border-radius: 50%; /* Make it round */
+    object-fit: cover; /* Ensure it doesn't stretch */
+}
+.comment-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+.comment-date {
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
+.comment-meta img.profile-pic {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    object-fit: cover;
+}
