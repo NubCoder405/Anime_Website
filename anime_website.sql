@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 11, 2025 at 10:02 AM
+-- Generation Time: Mar 11, 2025 at 10:08 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -105,7 +105,6 @@ INSERT INTO `comments` (`anime_id`, `episode_id`, `user_id`, `comment_text`, `cr
 (1, 0, 1, 'test#15253', '2025-03-09 05:22:29', 0, 0, NULL, 31),
 (1, 0, 1, 'test#15253', '2025-03-09 05:22:31', 0, 0, NULL, 32),
 (1, 0, 1, 'test#15254', '2025-03-09 05:25:07', 0, 0, NULL, 33),
-(4, 0, 1, 'FUCK', '2025-03-09 05:33:55', 0, 0, NULL, 34),
 (2, 0, 3, 'Needs more improvization\r\n', '2025-03-09 06:01:00', 0, 0, NULL, 35),
 (1, 0, 3, 'jbj', '2025-03-09 06:12:25', 0, 0, NULL, 36),
 (1, 0, 4, 'hello', '2025-03-09 06:38:42', 0, 0, NULL, 37),
@@ -160,7 +159,6 @@ INSERT INTO `comment_likes` (`id`, `user_id`, `comment_id`, `type`) VALUES
 (42, 1, 33, 'like'),
 (43, 3, 35, 'like'),
 (44, 2, 44, 'like'),
-(45, 2, 34, 'like'),
 (46, 2, 37, 'like'),
 (47, 1, 61, 'like');
 
